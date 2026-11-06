@@ -77,6 +77,7 @@ body{min-width:320px;overflow-wrap:break-word}
 <header><div class="top"><a class="brand" href="/">وص<span>لة</span></a><a href="/" class="back">الرجوع للموقع ←</a></div></header>
 <section class="hero"><div class="wrap"><span class="kicker">للشباب والباحثين عن عمل • العريش – شمال سيناء</span><h1>استبيان الشباب والموظفين</h1><p>شاركنا تجربتك وتوقعاتك من العمل في العريش. ندرس أسباب عدم استقرار الوظائف حتى نصمّم حلولًا مناسبة للشباب وأصحاب المشروعات.</p><span class="meta">المدة المتوقعة: 4–6 دقائق • المشاركة اختيارية ومجانية</span></div></section>
 <main class="shell"><div class="panel"><div class="head"><h2>شاركنا رأيك</h2><p>البيانات تُستخدم في تحليل احتياجات سوق العمل. لا تُعتبر المشاركة طلب توظيف أو عرض عمل أو اتفاق شراكة.</p></div><div class="progress"><div id="progress"></div></div><div class="body">
+<div class="notice" id="setup-msg" role="status"><strong>تنبيه: نسخة معاينة فقط.</strong> تقدر تراجع الأسئلة والاختيارات دلوقتي، لكن استقبال الإجابات لم يُفعّل بعد. هنفتح الإرسال بعد تحديد بريد المشروع وطريقة حفظ الردود.</div>
 <form id="survey-form" method="POST" action="#" novalidate>
 <input type="hidden" name="_subject" value="وصلة العريش — استبيان الشباب والموظفين"/><input type="hidden" name="_captcha" value="true"/><input type="hidden" name="_template" value="table"/><input type="hidden" name="_next" value="https://wasla-arish-2026.onrender.com/forms/thanks/"/>
 <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="position:absolute;left:-10000px" aria-hidden="true"/>
@@ -94,7 +95,7 @@ body{min-width:320px;overflow-wrap:break-word}
 <fieldset class="question" data-q="stability" data-required="false" data-kind="textarea"><legend><span class="qnum">12</span> إيه أهم حاجة بتخليك تستمر في وظيفة؟ </legend><p class="hint">اكتب رأيك بصراحة، من غير أسماء أشخاص</p><textarea name="stability" id="q_stability" rows="3" maxlength="600" placeholder="إجابتك (اختياري)"></textarea><p class="err" aria-live="polite"></p></fieldset>
 <div class="consent"><label><input type="checkbox" id="consent" name="consent" value="موافق" required/><span>أوافق على استخدام إجاباتي لأغراض الدراسة والتحليل، وأؤكد أن عمري 18 سنة أو أكثر.</span></label>
 <p>لا نطلب اسمك أو رقم هاتفك في هذه المرحلة. عند تفعيل الاستقبال، ستُرسل الإجابات إلى خدمة خارجية لتسليمها إلى فريق المشروع عبر البريد الإلكتروني، وسيُوضح ذلك قبل فتح الإرسال. لا تكتب بيانات حساسة أو أسماء أشخاص في الإجابات.</p></div>
-<div class="notice" id="setup-msg" role="status">الاستبيان جاهز للمعاينة حاليًا. <strong>استقبال الإجابات لم يُفعّل بعد</strong>، حتى يتم تحديد بريد المشروع واعتماد طريقة حفظ الردود. تقدر تشوف الأسئلة وتراجعها الآن.</div>
+
 <div class="actions"><button class="primary" type="submit" id="submit" disabled>إرسال الإجابات (قيد التفعيل)</button><span class="footnote">الضغط على الإرسال هيكون متاح بمجرد ربط جهة استقبال الردود.</span></div>
 </form>
 <div class="success" id="success"></div>

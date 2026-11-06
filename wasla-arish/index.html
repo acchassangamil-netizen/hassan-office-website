@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#092b35" />
   <meta name="description" content="تمكين: مبادرة في مرحلة دراسة السوق بمدينة العريش لفهم احتياجات الشركات والشباب، تمهيدًا لتطوير حلول للتوظيف والتأهيل المهني واستقرار العمل." />
-  <title>تمكين | نُمكّن الإنسان.. وننمي الأعمال</title>
+  <title>تمكين | نُمكّن الإنسان.. وننمي الأعمال</title><link rel="icon" type="image/svg+xml" href="/assets/tamkeen-mark.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Tajawal:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -31,8 +31,8 @@
     .site-header { position: sticky; top: 0; z-index: 20; background:rgba(247,247,241,.95); border-bottom: 1px solid rgba(16,43,53,.09); backdrop-filter:blur(18px); }
     .nav { min-height: 83px; display:flex; justify-content:space-between; align-items:center; gap: 20px; }
     .brand { display:flex; align-items:center; gap: 11px; white-space:nowrap; }
-    .brand-mark { width:44px; height:44px; flex-shrink:0; border-radius:14px; background:linear-gradient(145deg,#092b35,#125965); display:flex; align-items:center; justify-content:center; box-shadow:0 6px 15px #092b3520; }
-    .brand-mark svg { display:block; width:32px; height:32px; flex-shrink:0; }
+    .brand-mark {width:46px;height:46px;flex-shrink:0;display:flex;align-items:center;justify-content:center;border-radius:14px;}
+    .brand-mark img {display:block;width:46px;height:46px;object-fit:contain;}
     .brand-name { font-size:25px; line-height:1.1; font-weight:900; letter-spacing:-1.5px; }
     .brand-sub { display:block; font-size:9px; font-weight:700; letter-spacing:0; color:#71878a; margin-top:5px; }
     .nav-links { display:flex; align-items:center; gap: 29px; font-size:13px; font-weight:700; color:#39535d; }
@@ -181,14 +181,23 @@
       .metrics-grid { gap:9px; } .metric { padding:22px 15px; } .metric strong { font-size:34px; }
     }
     @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } * { transition:none !important; } }
-  </style>
+  
+    /* Tamkeen visual identity — scalable brand lockup */
+    .hero-brand {display:flex;align-items:center;gap:14px;margin-bottom:22px;max-width:100%;}
+    .hero-brand>img {width:70px;height:70px;flex:0 0 70px;border-radius:18px;box-shadow:0 12px 35px #041b2250;}
+    .hero-brand-type {display:flex;flex-direction:column;align-items:flex-start;gap:1px;min-width:0;}
+    .hero-brand-type strong {font-family:'Cairo',Tahoma,Arial,sans-serif;font-size:35px;line-height:1.35;font-weight:900;color:#fff;}
+    .hero-brand-type span {font-size:11px;color:#bce6df;font-weight:700;line-height:1.6;}
+    .hero-brand-type b {color:#ffc18b;padding-inline:2px;}
+    @media(max-width:640px){.hero-brand {gap:11px;margin-bottom:16px}.hero-brand>img{width:58px;height:58px;flex-basis:58px;border-radius:16px}.hero-brand-type strong{font-size:29px}.hero-brand-type span{font-size:10px}}
+</style>
 </head>
 <body>
   <!-- روابط الاستبيانات الداخلية متاحة للمعاينة؛ استقبال الإجابات لم يُفعّل بعد. -->
   <header class="site-header">
     <div class="wrap nav">
       <a class="brand" href="#الرئيسية" aria-label="تمكين - العودة للرئيسية">
-        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48" width="30" height="30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M10 36V28M20 36V23M30 36V28" stroke="#B8E9DF" stroke-width="4" stroke-linecap="round"/><path d="M9 23L19 14L27 20L39 8M31 8H39V16" stroke="#FFBE83" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span class="brand-mark" aria-hidden="true"><img src="/assets/tamkeen-mark.svg" alt="" width="44" height="44"></span>
         <span class="brand-name">تمكين <small class="brand-sub">للتوظيف والتأهيل المهني</small></span>
       </a>
       <nav class="nav-links" id="nav-links" aria-label="القائمة الرئيسية">
@@ -206,6 +215,7 @@
     <section class="hero" id="الرئيسية">
       <div class="wrap hero-inner">
         <div>
+          <div class="hero-brand" aria-label="تمكين - للتوظيف والتأهيل المهني"><img src="/assets/tamkeen-mark.svg" alt="رمز تمكين" width="70" height="70"><div class="hero-brand-type"><strong>تمكين</strong><span>TAMKEEN <b>·</b> للتوظيف والتأهيل المهني</span></div></div>
           <span class="eyebrow"><span class="dot"></span> مشروع مجتمعي قيد الدراسة · العريش، شمال سيناء</span>
           <h1>نُمكّن <em>الإنسان</em>،<br>وننمي الأعمال.</h1>
           <p>في تمكين، بنبدأ بفهم احتياجات أصحاب الأعمال والشباب في العريش، علشان نطوّر مستقبلًا حلولًا للتوظيف والتأهيل المهني تساعد على الاستقرار. إحنا حاليًا في مرحلة دراسة السوق، ولسه ما بدأناش تقديم خدمات التوظيف.</p>

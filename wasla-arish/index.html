@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0a2733" />
+  <meta name="description" content="وصلة: مشروع اجتماعي في مرحلة دراسة السوق بمدينة العريش لفهم احتياجات أصحاب الأعمال وتحديات الشباب، تمهيدًا لتطوير حلول التوظيف والتأهيل." />
+  <title>وصلة | فرص أقرب، واستقرار أطول</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Tajawal:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #102b35; --muted: #59717a; --teal: #007e82; --teal-light: #e4f4f0;
+      --dark: #092b35; --orange: #ffb375; --cream: #f7f7f1; --white: #ffffff;
+      --stroke: #dbe6e3; --soft: #ecf3f1; --shadow: 0 18px 64px rgba(9,43,53,.10);
+      --radius: 23px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--cream); color: var(--ink); font-family: 'Cairo','Tajawal',Tahoma,Arial,sans-serif; line-height: 1.85; }
+    button, a { font: inherit; }
+    a { text-decoration: none; color: inherit; }
+    button { cursor: pointer; }
+    img,svg { max-width: 100%; }
+    ::selection { background: #ffd5b2; color: var(--ink); }
+    .wrap { width: min(1170px, calc(100% - 48px)); margin-inline: auto; }
+    .eyebrow { display: inline-flex; align-items:center; gap:9px; font-size: 12px; font-weight: 800; letter-spacing: .1px; border-radius: 100px; padding: 7px 13px; background: rgba(255,255,255,.13); color: #e6f2ee; }
+    .eyebrow.light { color: var(--teal); background: #e1f2ed; }
+    .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--orange); box-shadow:0 0 0 4px rgba(255,179,117,.18); }
+    .site-header { position: sticky; top: 0; z-index: 20; background:rgba(247,247,241,.95); border-bottom: 1px solid rgba(16,43,53,.09); backdrop-filter:blur(18px); }
+    .nav { min-height: 83px; display:flex; justify-content:space-between; align-items:center; gap: 20px; }
+    .brand { display:flex; align-items:center; gap: 11px; white-space:nowrap; }
+    .brand-mark { width:42px; height:42px; flex-shrink:0; border-radius: 14px; background: var(--dark); position:relative; display:flex; align-items:center; justify-content:center; }
+    .brand-mark::before, .brand-mark::after { content:''; position:absolute; width:14px; height:14px; border:5px solid #a4e2d8; border-radius:9px; transform:rotate(-24deg); }
+    .brand-mark::before { inset-inline-start:7px; inset-block-start:7px; }
+    .brand-mark::after { inset-inline-end:7px; inset-block-end:7px; border-color:#ffc28b; }
+    .brand-name { font-size:25px; line-height:1.1; font-weight:900; letter-spacing:-1.5px; }
+    .brand-sub { display:block; font-size:9px; font-weight:700; letter-spacing:0; color:#71878a; margin-top:5px; }
+    .nav-links { display:flex; align-items:center; gap: 29px; font-size:13px; font-weight:700; color:#39535d; }
+    .nav-links a:hover,.footer-links a:hover { color:var(--teal); }
+    .btn { border:none; border-radius: 12px; display:inline-flex; justify-content:center; align-items:center; gap: 10px; font-weight:800; font-size:13px; line-height:1.3; padding: 15px 22px; transition:transform .2s, background-color .2s,box-shadow .2s; }
+    .btn:hover { transform: translateY(-2px); }
+    .btn:focus-visible,.nav-links a:focus-visible,.mobile-toggle:focus-visible { outline: 3px solid #ffba71; outline-offset: 3px; }
+    .btn-dark { color:white; background:var(--dark); }
+    .btn-dark:hover { background:#14505a; }
+    .btn-teal { color:white; background:#00878a; box-shadow:0 14px 30px rgba(0,135,138,.16); }
+    .btn-teal:hover { background:#006e70; }
+    .btn-outline { border: 1px solid rgba(255,255,255,.4); color:white; background:rgba(255,255,255,.07); }
+    .btn-outline:hover { background:rgba(255,255,255,.14); }
+    .btn-light { color:var(--dark); background:white; }
+    .btn-ghost { background: transparent; border:1px solid #cbdcd8; color:var(--ink); }
+    .mobile-toggle { display:none; background:transparent; border:none; padding:8px; color:var(--ink); }
+    .hero { background:var(--dark); color:white; overflow:hidden; position:relative; isolation:isolate; }
+    .hero::before { content:''; position:absolute; width:630px; height:630px; border-radius:50%; top:-330px; left:-110px; border:1px solid rgba(255,255,255,.12); box-shadow:0 0 0 110px rgba(255,255,255,.026),0 0 0 220px rgba(255,255,255,.018); z-index:-1; }
+    .hero::after { content:''; position:absolute; width:360px; height:360px; bottom:-310px; right:25%; border-radius:50%; background:rgba(28,153,155,.12); filter:blur(35px); z-index:-1; }
+    .hero-inner { padding: 85px 0 112px; display:grid; grid-template-columns: 1.04fr .96fr; gap:45px; align-items:center; }
+    .hero h1 { font-size: clamp(36px, 4.35vw, 65px); letter-spacing:-2.8px; line-height:1.52; margin:24px 0 18px; font-weight:900; }
+    .hero h1 em { color:#ffbd83; font-style:normal; position:relative; white-space:nowrap; }
+    .hero p { font-size:15px; color:#c4d8da; line-height:2.15; max-width:515px; margin:0 0 32px; }
+    .hero-actions { display:flex; gap:11px; flex-wrap:wrap; }
+    .hero-trust { margin-top:35px; display:flex; align-items:center; gap:10px; font-size:11px; color:#acc5c8; }
+    .hero-trust svg { width:17px; height:17px; color:#ffbd83; }
+    .visual { position:relative; min-height:468px; display:flex; justify-content:center; align-items:center; }
+    .orb { width: 360px; height:360px; position:absolute; border-radius:50%; border:1px dashed rgba(187,238,228,.2); left: 14%; top: 10%; }
+    .orb::before { content:''; position:absolute; inset:42px; border-radius:50%; border:1px solid rgba(187,238,228,.17); }
+    .visual-card { position:absolute; background:#ffffff; color:var(--ink); border-radius:20px; box-shadow:0 24px 66px rgba(0,0,0,.19); padding:18px 20px; width:250px; border:1px solid #edf4ef; }
+    .visual-card.company { right:0; top:28px; transform:rotate(4deg); }
+    .visual-card.youth { left:0; bottom:50px; transform:rotate(-5deg); }
+    .vc-head { display:flex; align-items:center; justify-content:space-between; gap:10px; }
+    .vc-icon { height:43px; width:43px; border-radius:12px; display:grid; place-items:center; background:#eaf5f1; color:#007e82; font-size:20px; }
+    .vc-type { font-size:10px; color:#769096; font-weight:800; }
+    .vc-title { font-size:17px; font-weight:900; margin:10px 0; }
+    .vc-lines { display:grid; gap:8px; }
+    .vc-lines span { display:flex; align-items:center; gap:7px; font-size:11px; font-weight:700; color:#576d75; }
+    .vc-lines span::before { content:'✓'; color:var(--teal); background:#e5f2ee; font-size:10px; width:17px; height:17px; border-radius:50%; text-align:center; }
+    .heart { width:163px; height:163px; border-radius:42px; background:linear-gradient(145deg,#fbd9af,#ffa96c); box-shadow:0 26px 76px rgba(255,166,98,.24); transform:rotate(-12deg); display:flex; align-items:center; justify-content:center; position:relative; z-index:1; }
+    .heart svg { width:112px; height:112px; transform:rotate(12deg); }
+    .floating-label { position:absolute; bottom:30px; right:16%; color:#dbf0ee; border:1px solid rgba(255,255,255,.2); padding:9px 14px; border-radius:12px; font-size:12px; background:rgba(255,255,255,.08); }
+    .floating-label strong { color:#ffbd83; }
+    .status { background:#ebf4f0; color:#315761; border-bottom:1px solid #d8e7df; }
+    .status-inner { display:flex; align-items:center; gap:12px; justify-content:center; padding:13px 0; font-size:12px; font-weight:700; text-align:center; }
+    .status-icon { display:grid; place-items:center; width:25px; height:25px; border-radius:50%; background:white; color:#007e82; font-size:14px; flex-shrink:0; }
+    .section { padding: 94px 0; }
+    .section-head { display:flex; justify-content:space-between; gap:20px; align-items:end; margin-bottom:35px; }
+    .section-hint { font-size:12px; color:var(--teal); font-weight:900; margin-bottom:8px; display:block; }
+    h2 { font-size:clamp(28px,3vw,42px); line-height:1.55; letter-spacing:-1.1px; margin:0; }
+    .section-head p { max-width:420px; font-size:13px; color:var(--muted); margin:0; }
+    .intro { display:grid; grid-template-columns: 1fr 1fr; gap:21px; }
+    .intro-card { border-radius:24px; border:1px solid var(--stroke); background:#fff; padding:35px; position:relative; overflow:hidden; min-height:270px; }
+    .intro-card::after { content:''; height:195px; width:195px; border-radius:100%; position:absolute; left:-92px; top:-90px; background:#e8f5f0; }
+    .intro-card:nth-child(2)::after { background:#fff1e3; }
+    .big-num { font-size:12px; font-weight:900; color:#7c8e8f; }
+    .intro-card h3 { font-size:23px; line-height:1.5; margin:20px 0 10px; }
+    .intro-card p { color:var(--muted); font-size:14px; margin:0; max-width:410px; }
+    .pill-row { display:flex; flex-wrap:wrap; gap:8px; margin-top:20px; }
+    .pill { border:1px solid #e0eae5; border-radius:30px; padding:5px 12px; font-size:11px; font-weight:800; background:#f8fbf9; color:#45646b; }
+    .sectors { background:#edf3ef; }
+    .sector-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
+    .sector { padding:24px; border-radius:20px; border:1px solid #dae6df; background:#fff; min-height:215px; transition: transform .2s,box-shadow .2s; }
+    .sector:hover { transform:translateY(-5px); box-shadow:var(--shadow); }
+    .sector-ico { width:50px; height:50px; border-radius:15px; background:#ebf6f2; color:#007e82; display:grid; place-items:center; font-size:23px; margin-bottom:23px; }
+    .sector h3 { margin:0 0 7px; font-size:17px; }
+    .sector p { font-size:11px; line-height:1.9; color:#65808a; margin:0; }
+    .survey-section { background:#fff; }
+    .survey-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:20px; }
+    .survey-card { border-radius:24px; padding:35px; position:relative; overflow:hidden; min-height:360px; display:flex; flex-direction:column; align-items:start; }
+    .survey-card.employer { background:#0c3842; color:white; }
+    .survey-card.jobseeker { background:#f3e7d9; color:#1b3a40; }
+    .survey-card::after { content:''; position:absolute; width:230px; height:230px; left:-100px; top:-100px; border:2px solid currentColor; border-radius:45%; opacity:.09; transform:rotate(30deg); }
+    .survey-card .smalltag { font-size:11px; font-weight:900; letter-spacing:.3px; border:1px solid currentColor; border-radius:20px; padding:3px 12px; opacity:.8; }
+    .survey-card h3 { font-size:26px; letter-spacing:-.6px; line-height:1.6; margin:22px 0 8px; }
+    .survey-card p { font-size:13px; line-height:2; max-width:430px; margin:0 0 22px; opacity:.85; }
+    .survey-card .btn { margin-top:auto; }
+    .survey-card.jobseeker .btn { background:#153943; color:white; }
+    .steps { display:grid; grid-template-columns:repeat(4,1fr); gap:17px; }
+    .step { position:relative; border-top:2px solid #cbded8; padding:28px 0 0; }
+    .step::before { content:''; position:absolute; height:13px; width:13px; border-radius:50%; right:0; top:-8px; background:var(--teal); border:3px solid var(--cream); }
+    .step-number { font-size:34px; color:#9ccbc1; font-weight:900; line-height:1; }
+    .step h3 { font-size:17px; margin:15px 0 8px; }
+    .step p { margin:0; font-size:12px; color:var(--muted); }
+    .metrics { background:#0a3039; color:white; }
+    .metrics .section-hint { color:#b1dfd5; }
+    .metrics .section-head p { color:#b5cdd0; }
+    .metrics-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:13px; }
+    .metric { padding:28px 25px; border-radius:18px; background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.12); }
+    .metric strong { display:block; font-weight:900; font-size:41px; line-height:1.2; color:#ffbf8c; }
+    .metric span { display:block; font-size:12px; font-weight:700; color:#dbedef; margin-top:10px; }
+    .metric-note { color:#9ebdc2; font-size:11px; margin-top:20px; }
+    .faq { background:#fff; }
+    .faq-grid { display:grid; grid-template-columns: .75fr 1.25fr; gap:45px; }
+    .faq .lead { font-size:13px; color:var(--muted); margin-top:14px; }
+    details { background:#f7faf8; border:1px solid #e2ebe6; border-radius:14px; padding:16px 20px; margin-bottom:10px; }
+    summary { font-weight:800; cursor:pointer; font-size:14px; }
+    details p { font-size:12px; color:var(--muted); padding:3px 0; margin:10px 0 0; }
+    .closing { background:var(--cream); padding:60px 0 90px; }
+    .closing-panel { border-radius:29px; background:linear-gradient(110deg,#e3f1e8,#f5e8d8); padding:50px 55px; display:flex; justify-content:space-between; align-items:center; gap:24px; }
+    .closing-panel h2 { font-size:clamp(26px,3vw,36px); }
+    .closing-panel p { font-size:13px; margin:10px 0 0; color:var(--muted); }
+    .closing-actions { display:flex; flex-wrap:wrap; gap:10px; }
+    .site-footer { background:#082832; color:#c1d3d5; padding:40px 0 25px; }
+    .footer-row { display:flex; justify-content:space-between; align-items:center; gap:20px; padding-bottom:27px; border-bottom:1px solid rgba(255,255,255,.1); }
+    .footer-brand { color:white; font-size:25px; font-weight:900; }
+    .footer-brand small { display:block; color:#abc4c8; font-size:10px; font-weight:600; margin-top:2px; }
+    .footer-links { display:flex; gap:21px; font-weight:700; font-size:12px; }
+    .footer-bottom { display:flex; justify-content:space-between; align-items:center; gap:15px; padding-top:20px; font-size:11px; color:#93b1b6; }
+    .modal-backdrop { position:fixed; inset:0; z-index:50; background:rgba(4,23,30,.75); display:none; align-items:center; justify-content:center; padding:20px; backdrop-filter:blur(6px); }
+    .modal-backdrop.visible { display:flex; }
+    .modal { width:min(100%,480px); border-radius:24px; background:#fff; color:var(--ink); padding:33px; box-shadow:0 28px 90px rgba(0,0,0,.18); position:relative; }
+    .modal h3 { font-size:23px; margin:13px 0 7px; }
+    .modal p { color:var(--muted); font-size:13px; margin:0 0 22px; }
+    .modal-symbol { display:grid; place-items:center; height:49px; width:49px; border-radius:15px; background:#e7f5ef; color:var(--teal); font-size:24px; }
+    .close-modal { border:none; border-radius:50%; width:35px; height:35px; background:#edf3f1; position:absolute; top:14px; left:14px; font-size:22px; color:var(--ink); }
+    .modal .btn { width:100%; }
+    .sr-only { position:absolute; width:1px; height:1px; padding:0; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+    @media(max-width:970px) { .nav-links { gap:14px; } .hero-inner { gap:15px; } .visual { transform:scale(.88); transform-origin:center; } .sector-grid { grid-template-columns: repeat(2,1fr); } }
+    @media(max-width:760px) {
+      .wrap { width:min(100% - 36px,600px); }
+      .nav { min-height:72px; } .nav > .btn { display:none; } .mobile-toggle { display:block; }
+      .nav-links { display:none; position:absolute; top:72px; right:0; left:0; padding:20px 25px 25px; background:var(--cream); border-bottom:1px solid var(--stroke); flex-direction:column; align-items:stretch; }
+      .nav-links.open { display:flex; } .nav-links a { padding:7px 0; }
+      .hero-inner { grid-template-columns:1fr; padding:58px 0 35px; }
+      .hero h1 { font-size:clamp(34px,8.5vw,54px); letter-spacing:-1.6px; }
+      .hero p { font-size:13px; }
+      .visual { transform:scale(.83); height:360px; min-height:360px; margin-top:-25px; }
+      .hero-trust { margin-top:20px; }
+      .section { padding:67px 0; }
+      .section-head { display:block; margin-bottom:27px; } .section-head p { margin-top:12px; }
+      .intro,.survey-grid,.faq-grid { grid-template-columns:1fr; }
+      .steps { grid-template-columns:repeat(2,1fr); gap:27px; }
+      .metrics-grid { grid-template-columns:repeat(2,1fr); }
+      .closing-panel { display:block; padding:32px 24px; } .closing-actions { margin-top:22px; }
+      .footer-row,.footer-bottom { display:block; } .footer-links { margin-top:22px; flex-wrap:wrap; }
+      .footer-bottom span { display:block; margin:5px 0; }
+    }
+    @media(max-width:460px) {
+      .hero-actions .btn { flex:1; padding:14px 12px; font-size:11px; }
+      .visual { transform:scale(.70); margin: -50px -35px -55px; }
+      .intro-card,.survey-card { padding:26px; }
+      .sector-grid { grid-template-columns:repeat(2,1fr); gap:10px; }
+      .sector { padding:19px; min-height:215px; } .sector h3 { font-size:14px; }
+      .steps { grid-template-columns:1fr; gap:19px; } .step { padding-top:20px; }
+      .metrics-grid { gap:9px; } .metric { padding:22px 15px; } .metric strong { font-size:34px; }
+    }
+    @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } * { transition:none !important; } }
+  </style>
+</head>
+<body>
+  <!-- إعدادات الموقع: ضع روابط الاستبيانات الفعلية بين علامتي الاقتباس بعد إنشائها على Google Forms -->
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="#الرئيسية" aria-label="وصلة - العودة للرئيسية">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-name">وصلة <small class="brand-sub">فرص أقرب، واستقرار أطول</small></span>
+      </a>
+      <nav class="nav-links" id="nav-links" aria-label="القائمة الرئيسية">
+        <a href="#الفكرة">عن المشروع</a>
+        <a href="#القطاعات">القطاعات</a>
+        <a href="#شارك">شارك في الدراسة</a>
+        <a href="#الخطوات">خطتنا</a>
+        <a href="#الاسئلة">أسئلة شائعة</a>
+      </nav>
+      <a class="btn btn-dark" href="#شارك">شارك برأيك <span aria-hidden="true">↗</span></a>
+      <button class="mobile-toggle" type="button" id="mobile-toggle" aria-label="فتح القائمة" aria-expanded="false">☰</button>
+    </div>
+  </header>
+  <main>
+    <section class="hero" id="الرئيسية">
+      <div class="wrap hero-inner">
+        <div>
+          <span class="eyebrow"><span class="dot"></span> مشروع مجتمعي قيد الدراسة · العريش، شمال سيناء</span>
+          <h1>لما نفهم الطرفين،<br>نقرّب <em>الفرصة</em><br>من الشخص المناسب.</h1>
+          <p>بنبني فكرة مشروع يساعد أصحاب الأعمال يلاقوا الأشخاص المناسبين، ويساعد الشباب يفهموا فرص سوق العمل. بنبدأ دلوقتي بسماع تجاربكم واحتياجاتكم، قبل إطلاق أي خدمة توظيف أو تدريب.</p>
+          <div class="hero-actions">
+            <a class="btn btn-teal" href="#شارك">شارك في الدراسة <span aria-hidden="true">↗</span></a>
+            <a class="btn btn-outline" href="#الفكرة">اعرف الفكرة <span aria-hidden="true">↓</span></a>
+          </div>
+          <div class="hero-trust"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg> مشاركة تطوعية في استطلاع رأي · لا توجد وظائف معلنة حاليًا</div>
+        </div>
+        <div class="visual" aria-label="رسم رمزي للتواصل بين صاحب العمل والباحث عن العمل" role="img">
+          <div class="orb" aria-hidden="true"></div>
+          <div class="visual-card company" aria-hidden="true">
+            <div class="vc-head"><span class="vc-type">وجهة نظر صاحب العمل</span><span class="vc-icon">▣</span></div>
+            <div class="vc-title">محتاج فريق ثابت</div>
+            <div class="vc-lines"><span>موظف مناسب لطبيعة الشغل</span><span>وضوح والتزام</span><span>استقرار لفترة أطول</span></div>
+          </div>
+          <div class="heart" aria-hidden="true"><svg viewBox="0 0 120 120" fill="none"><path d="M25 68c8-11 22-9 32-1m39-18L70 71c-7 6-14 2-12-5l10-16c-6-2-12-3-18-1l-15 5L20 42M97 81 73 97c-6 4-9 3-14 0L37 80m50-25 14-10" stroke="#103f48" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 42 30 35l15 43-15 8-15-44Zm90-6 11 9-23 39-11-8 23-40Z" fill="#fff7ec" stroke="#103f48" stroke-width="6" stroke-linejoin="round"/></svg></div>
+          <div class="visual-card youth" aria-hidden="true">
+            <div class="vc-head"><span class="vc-type">وجهة نظر الشباب</span><span class="vc-icon">♙</span></div>
+            <div class="vc-title">بدور على فرصة مناسبة</div>
+            <div class="vc-lines"><span>راتب وتوقعات واضحة</span><span>تقدير وبيئة عمل جيدة</span><span>فرصة أتعلم وأستمر</span></div>
+          </div>
+          <div class="floating-label">نفهم المشكلة <strong>قبل ما نقدّم الحل</strong></div>
+        </div>
+      </div>
+    </section>
+    <div class="status"><div class="wrap status-inner"><span class="status-icon">i</span><span>إحنا حاليًا في مرحلة دراسة احتياجات سوق العمل بالعريش، ولسه ما بدأناش توفير وظائف أو خدمات إلحاق عمالة.</span></div></div>
+    <section class="section" id="الفكرة">
+      <div class="wrap">
+        <div class="section-head"><div><span class="section-hint">المشكلة اللي بنحاول نحلها</span><h2>مش مجرد وظيفة شاغرة.<br>المهم إنها تستمر.</h2></div><p>ساعات صاحب المشروع يدور كتير على موظف، ولما يلاقيه ما يكملش. وفي نفس الوقت، شباب كتير بيواجهوا صعوبة في الوصول لفرصة تناسبهم.</p></div>
+        <div class="intro">
+          <article class="intro-card"><span class="big-num">01 / أصحاب الأعمال</span><h3>التعيين بياخد وقت…<br>والاستقرار أصعب.</h3><p>عايزين نفهم الوظائف اللي يصعب شغلها، وأسباب دوران العمالة، وإيه اللي يساعد صاحب المشروع يحتفظ بفريق مناسب.</p><div class="pill-row"><span class="pill">نقص العمالة</span><span class="pill">وقت التوظيف</span><span class="pill">معدل الاستمرار</span></div></article>
+          <article class="intro-card"><span class="big-num">02 / الشباب</span><h3>في فرص موجودة…<br>بس مش دايمًا مناسبة.</h3><p>عايزين نسمع تجارب الشباب مع الرواتب وساعات العمل وطبيعة الوظيفة والتدريب، ونعرف إيه اللي يخلي الشغل مستقر.</p><div class="pill-row"><span class="pill">وضوح التوقعات</span><span class="pill">مهارات العمل</span><span class="pill">بيئة مناسبة</span></div></article>
+        </div>
+      </div>
+    </section>
+    <section class="section sectors" id="القطاعات"><div class="wrap"><div class="section-head"><div><span class="section-hint">هنبدأ منين؟</span><h2>أربع مجالات قريبة من<br>حياة العريش اليومية.</h2></div><p>هنركز في المرحلة الأولى على السوبر ماركت والمطاعم، ومعاهم وظائف المبيعات وخدمة العملاء المشتركة بين القطاعات.</p></div>
+      <div class="sector-grid">
+        <article class="sector"><div class="sector-ico">▤</div><h3>السوبر ماركت</h3><p>الكاشير، وتنظيم الأرفف، والمبيعات، والمخازن.</p></article>
+        <article class="sector"><div class="sector-ico">♨</div><h3>المطاعم</h3><p>الخدمة، واستقبال الطلبات، والكاشير، والتعامل مع الزبائن.</p></article>
+        <article class="sector"><div class="sector-ico">↗</div><h3>المبيعات</h3><p>فهم العميل، وعرض المنتجات، والالتزام بأهداف البيع.</p></article>
+        <article class="sector"><div class="sector-ico">◎</div><h3>خدمة العملاء</h3><p>التواصل، وحل المشكلات، والتعامل مع الشكاوى.</p></article>
+      </div></div></section>
+    <section class="section survey-section" id="شارك"><div class="wrap"><div class="section-head"><div><span class="section-hint">صوتك يصنع بداية أفضل</span><h2>اختار الاستبيان المناسب ليك.</h2></div><p>كل إجابة هتساعدنا نفهم السوق ونحدد أولويات المشروع. المشاركة مجانية واختيارية.</p></div>
+      <div class="survey-grid">
+        <article class="survey-card employer"><span class="smalltag">لأصحاب المشروعات ومسؤولي التوظيف</span><h3>عندك مشروع وبتواجه<br>صعوبة في التوظيف؟</h3><p>شاركنا الوظائف اللي محتاجها، وطبيعة الشغل، وأبرز التحديات اللي بتقابلك في العثور على موظفين واستمرارهم.</p><button class="btn btn-light" type="button" data-survey="companies">استبيان أصحاب الأعمال <span aria-hidden="true">↗</span></button></article>
+        <article class="survey-card jobseeker"><span class="smalltag">للشباب والباحثين عن عمل</span><h3>بتدور على شغل؟<br>أو ليك تجربة عمل سابقة؟</h3><p>احكيلنا عن فرص الشغل اللي بتناسبك، وتوقعاتك، والمواقف اللي خلتك تكمل أو تسيب شغل سابق.</p><button class="btn" type="button" data-survey="youth">استبيان الشباب <span aria-hidden="true">↗</span></button></article>
+      </div>
+    </div></section>
+    <section class="section" id="الخطوات"><div class="wrap"><div class="section-head"><div><span class="section-hint">إحنا ماشيين إزاي؟</span><h2>نسمع. نفهم. نختبر. نتطور.</h2></div><p>المشروع هيبدأ بدراسة سوق حقيقية، وبعدها نقرر الخطوات المناسبة للتشغيل والتأهيل، وفق المتطلبات القانونية.</p></div>
+      <div class="steps"><div class="step"><span class="step-number">01</span><h3>نسمع للطرفين</h3><p>استبيانات ومقابلات مع أصحاب الأعمال والشباب في العريش.</p></div><div class="step"><span class="step-number">02</span><h3>نحلل الأسباب</h3><p>نفصل بين نقص المهارات ومشاكل الرواتب وساعات العمل والإدارة.</p></div><div class="step"><span class="step-number">03</span><h3>نختبر الحل</h3><p>نحدد نموذج الخدمة والشركاء قبل أي التزام تشغيلي كبير.</p></div><div class="step"><span class="step-number">04</span><h3>نبدأ بشكل قانوني</h3><p>بعد استيفاء المتطلبات، ننطلق بالتوظيف ثم نضيف التأهيل.</p></div></div>
+    </div></section>
+    <section class="section metrics"><div class="wrap"><div class="section-head"><div><span class="section-hint">خطة أول 60 يوم</span><h2>أهداف التجربة المبدئية.</h2></div><p>الأرقام دي أهداف نسعى نختبر تحقيقها، وليست إنجازات حصلت بالفعل.</p></div>
+      <div class="metrics-grid"><div class="metric"><strong>20</strong><span>منشأة ندرس احتياجاتها</span></div><div class="metric"><strong>100</strong><span>مشاركة من الشباب</span></div><div class="metric"><strong>5</strong><span>شركات مهتمة بالتعاون</span></div><div class="metric"><strong>3</strong><span>شركات مهتمة بخدمة مدفوعة مستقبلًا</span></div></div>
+      <div class="metric-note">* أهداف استرشادية لتقييم جدوى المشروع، ولا تمثل تعهدًا بالتوظيف أو نتيجة مضمونة.</div>
+    </div></section>
+    <section class="section faq" id="الاسئلة"><div class="wrap faq-grid"><div><span class="section-hint">أسئلة بتتكرر</span><h2>إجابات واضحة<br>من البداية.</h2><p class="lead">الشفافية مهمة بالنسبة لنا. المشروع لسه بيتدرس، ومش عايزين ندي وعود قبل أوانها.</p></div><div>
+      <details><summary>هل فيه وظائف متاحة حاليًا من خلال المشروع؟</summary><p>لا. إحنا حاليًا في مرحلة استطلاع ودراسة احتياجات سوق العمل في مدينة العريش، ومش بنقدّم وظائف أو ترشيحات للتعيين في المرحلة دي.</p></details>
+      <details><summary>هل المشاركة في الاستبيان بمقابل؟</summary><p>لا، المشاركة مجانية واختيارية، وهدفها جمع آراء تساعد على بناء مشروع مناسب لاحتياجات السوق.</p></details>
+      <details><summary>هل البيانات اللي هشاركها هتستخدم في التوظيف مباشرة؟</summary><p>لا. الردود تُجمع لغرض دراسة السوق وفق إشعار الخصوصية الخاص بنموذج الاستبيان. أي استخدام مختلف أو تواصل لاحق يتطلب موافقة مناسبة.</p></details>
+      <details><summary>ليه التأهيل هييجي بعد التوظيف في خطة المشروع؟</summary><p>الهدف إننا نحدد في البداية احتياجات الشركات وأسباب عدم استقرار الموظفين، وبعدها نصمم برامج تدريب على أساس مشكلات حقيقية بدل افتراضات.</p></details>
+      <details><summary>المشروع هيبدأ فين؟</summary><p>البداية المقترحة من مدينة العريش، محافظة شمال سيناء، والتركيز أولًا على المطاعم والسوبر ماركت والمبيعات وخدمة العملاء.</p></details>
+    </div></div></section>
+    <section class="closing"><div class="wrap"><div class="closing-panel"><div><span class="section-hint">كل صوت بيفرق</span><h2>مستقبل شغل أفضل يبدأ بسؤال.</h2><p>شاركنا تجربتك علشان نفهم سوق العمل في العريش بشكل أدق.</p></div><div class="closing-actions"><button class="btn btn-dark" data-survey="companies" type="button">أنا صاحب مشروع</button><button class="btn btn-ghost" data-survey="youth" type="button">أنا باحث عن عمل</button></div></div></div></section>
+  </main>
+  <footer class="site-footer"><div class="wrap"><div class="footer-row"><a href="#الرئيسية" class="footer-brand">وصلة<small>اسم وهوية مبدئيان قابلان للتغيير · العريش، شمال سيناء</small></a><div class="footer-links"><a href="#الفكرة">الفكرة</a><a href="#القطاعات">القطاعات</a><a href="#شارك">الاستبيانات</a><a href="#الاسئلة">الأسئلة الشائعة</a></div></div><div class="footer-bottom"><span>© <span id="year"></span> وصلة — نموذج أولي لمشروع اجتماعي في مرحلة دراسة السوق.</span><span>لا يقدم هذا الموقع خدمات توظيف أو وعودًا بالتعيين حاليًا.</span></div></div></footer>
+  <div class="modal-backdrop" id="survey-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true"><div class="modal"><button class="close-modal" id="close-modal" type="button" aria-label="إغلاق">×</button><div class="modal-symbol">↗</div><h3 id="modal-title">الاستبيان لم يُربط بعد</h3><p id="modal-message">بعد تجهيز رابط الاستبيان على Google Forms، هنضيفه هنا علشان تقدر تشارك مباشرة.</p><button type="button" class="btn btn-dark" id="modal-ok">تمام، فهمت</button></div></div>
+  <script>
+    /* ضع الروابط الحقيقية بعد إنشائها. لا تضع رابط تعديل النموذج: استخدم رابط استقبال الردود فقط. */
+    const SITE_CONFIG = {
+      companySurveyUrl: "",
+      youthSurveyUrl: ""
+    };
+    const navToggle = document.getElementById('mobile-toggle');
+    const navLinks = document.getElementById('nav-links');
+    navToggle.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', String(open));
+      navToggle.setAttribute('aria-label', open ? 'إغلاق القائمة' : 'فتح القائمة');
+      navToggle.textContent = open ? '×' : '☰';
+    });
+    navLinks.querySelectorAll('a').forEach(el => el.addEventListener('click', () => {
+      navLinks.classList.remove('open'); navToggle.setAttribute('aria-expanded', 'false'); navToggle.textContent = '☰';
+    }));
+    const modal = document.getElementById('survey-modal');
+    const closeButton = document.getElementById('close-modal');
+    let previousFocus = null;
+    function closeModal() {
+      modal.classList.remove('visible'); modal.setAttribute('aria-hidden','true');
+      if (previousFocus) previousFocus.focus();
+    }
+    function showModal(type) {
+      previousFocus = document.activeElement;
+      document.getElementById('modal-title').textContent = type === 'companies' ? 'استبيان الشركات قيد التجهيز' : 'استبيان الشباب قيد التجهيز';
+      document.getElementById('modal-message').textContent = 'لسه ما ضفناش رابط Google Forms النهائي. بمجرد تجهيز ونشر الاستبيان، الزر ده هيفتح نموذج المشاركة مباشرة. شكرًا لاهتمامك!';
+      modal.classList.add('visible'); modal.setAttribute('aria-hidden','false'); closeButton.focus();
+    }
+    document.querySelectorAll('[data-survey]').forEach(btn => btn.addEventListener('click', () => {
+      const type = btn.getAttribute('data-survey');
+      const url = type === 'companies' ? SITE_CONFIG.companySurveyUrl : SITE_CONFIG.youthSurveyUrl;
+      // روابط Google Forms فقط؛ امنع javascript: أو العناوين غير الموثوقة
+      if (url) {
+        try {
+          const parsed = new URL(url);
+          const valid = parsed.protocol === 'https:' && /(^|\.)forms\.gle$|(^|\.)docs\.google\.com$/.test(parsed.hostname);
+          if (valid) { window.open(parsed.href, '_blank', 'noopener,noreferrer'); return; }
+        } catch (e) { /* fallback to setup message */ }
+      }
+      showModal(type);
+    }));
+    closeButton.addEventListener('click', closeModal);
+    document.getElementById('modal-ok').addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+    document.addEventListener('keydown', (e) => { if (e.key==='Escape' && modal.classList.contains('visible')) closeModal(); });
+    document.getElementById('year').textContent = String(new Date().getFullYear());
+  </script>
+</body>
+</html>

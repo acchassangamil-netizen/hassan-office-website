@@ -73,6 +73,35 @@ body{min-width:320px;overflow-wrap:break-word}
   .hero{padding-inline:13px}
   .choice{font-size:13px}
 }
+
+/* Layout correction: use available viewport width without clipping content */
+html,body { width:100%; max-width:100%; min-width:0; overflow-x:clip; }
+.top,.hero .wrap { width:100%; max-width:1020px; }
+.shell { width:100%; max-width:1040px; margin:-26px auto 42px; padding-inline:clamp(10px,2.2vw,24px); }
+.panel,.body,.head,.question,.options { min-width:0; max-width:100%; }
+.question legend,.choice span,.hero h1,.hero p,.head p { overflow-wrap:anywhere; }
+.question select,.question textarea { min-width:0; max-width:100%; }
+@media (min-width:641px) and (max-width:1050px) {
+ .shell { width:100%; max-width:100%; padding-inline:18px; }
+}
+@media (max-width:640px) {
+ body { min-width:0; }
+ .top { max-width:100%; padding-inline:14px; }
+ .hero { padding:28px 14px 46px; }
+ .hero .wrap { width:100%; max-width:100%; }
+ .shell { max-width:100%; width:100%; padding-inline:8px; margin:-20px auto 26px; }
+ .panel { width:100%; border-radius:15px; }
+ .head { padding:17px 14px; }
+ .body { padding:7px 14px 22px; }
+ .options { grid-template-columns:minmax(0,1fr); }
+ .choice { width:100%; }
+}
+@media (max-width:360px) {
+ .shell { padding-inline:5px; }
+ .hero { padding-inline:11px; }
+ .head,.body { padding-inline:12px; }
+}
+
 </style></head><body>
 <header><div class="top"><a class="brand" href="/">وص<span>لة</span></a><a href="/" class="back">الرجوع للموقع ←</a></div></header>
 <section class="hero"><div class="wrap"><span class="kicker">لأصحاب المشروعات ومسؤولي التوظيف • العريش – شمال سيناء</span><h1>استبيان أصحاب الشركات والمشروعات</h1><p>ساعدنا نفهم احتياجات سوق العمل في العريش. هدفنا تقليل وقت البحث عن الموظفين وفهم أسباب عدم استقرارهم.</p><span class="meta">المدة المتوقعة: 5–7 دقائق • المشاركة اختيارية ومجانية</span></div></section>
